@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Joke Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Random Joke Generator</h1>
+
+    <section class="joke-card" aria-live="polite">
+      <p id="joke" class="joke">—</p>
+      <div class="actions">
+        <button id="new-joke">Get a joke</button>
+        <button id="copy-joke">Copy</button>
+        <button id="fav-joke">❤️ Favorite</button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <label>
+        Auto-refresh every
+        <input id="interval" type="number" min="0" value="0" /> seconds
+      </label>
+      <button id="toggle-auto">Start</button>
+    </section>
+
+    <section class="favorites">
+      <h2>Favorites</h2>
+      <ul id="favorites-list"></ul>
+    </section>
+
+    <div id="status" class="status" aria-live="assertive"></div>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
